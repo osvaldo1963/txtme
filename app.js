@@ -13,6 +13,5 @@ app.use(express.static(joinPath))
 app.get('/*', (req, res) => {
     res.sendFile(`${joinPath}`)
 });
-httpServer.listen(80, () => {
-    console.log("listing")
-})
+const PORT = process.env.PORT || 80;
+httpServer.listen(PORT, () => console.log("listing"));
