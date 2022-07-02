@@ -4,7 +4,7 @@ const http = require('http');
 const httpServer = http.createServer(app);
 const cors = require('cors');
 const path = require('path');
-const joinPath = path.join(__dirname, '../build/web/');
+const joinPath = path.join(__dirname, '/web/');
 
 app.use(cors());
 app.use(express.urlencoded({extended: true}));
